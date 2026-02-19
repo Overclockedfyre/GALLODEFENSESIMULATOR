@@ -12,6 +12,11 @@ public class EnemyFollowPath : MonoBehaviour
 
     private int index;
 
+    // Public readouts
+    public float DistanceToExit { get; private set; }
+    public float DistanceFromStart { get; private set; }
+    public Vector3 CurrentPosition => transform.position;
+
     public void Init(Path p)
     {
         path = p;
@@ -27,6 +32,10 @@ public class EnemyFollowPath : MonoBehaviour
         // Optional: spawn at first waypoint
         transform.position = path.Waypoints[0].position;
         index = 1;
+
+        // Initialize distance values immediately
+        DistanceFromStart = path.DistanceTravelled(transform.position, index);
+        DistanceToExit = path.RemainingDistance(transform.position, index);
     }
 
     private void Update()
@@ -55,6 +64,11 @@ public class EnemyFollowPath : MonoBehaviour
             );
         }
 
+        // Update distance metrics (after movement)
+        DistanceFromStart = path.DistanceTravelled(transform.position, index);
+        DistanceToExit = path.RemainingDistance(transform.position, index);
+
+        // Advance waypoint when close enough
         if (toTarget.sqrMagnitude <= reachDistance * reachDistance)
             index++;
     }
