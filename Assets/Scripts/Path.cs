@@ -14,9 +14,13 @@ public class Path : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log($"[Path Awake] name={name} active={gameObject.activeInHierarchy} childCount={transform.childCount}");
+
         Waypoints = new Transform[transform.childCount];
         for (int i = 0; i < Waypoints.Length; i++)
             Waypoints[i] = transform.GetChild(i);
+
+        Debug.Log($"[Path Awake] Waypoints.Length={Waypoints.Length}");
 
         BuildCache();
     }

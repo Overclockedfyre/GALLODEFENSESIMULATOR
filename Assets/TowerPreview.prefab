@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3977490285296961283}
   - component: {fileID: 484040318023928332}
   m_Layer: 10
-  m_Name: Tower
+  m_Name: TowerPreview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8505710812345368549}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1bc952ca7887e8439eafb20cdf0596b, type: 3}
   m_Name: 
