@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GPButtons : MonoBehaviour
 {
+    public TrackHealth playerHealth;
+    public int damageAmount = 10;
     public GameObject PauseMenu;
     public void SetButton()
     {
@@ -22,5 +24,11 @@ public class GPButtons : MonoBehaviour
         Debug.Log("time to leave");
         Application.Quit();
     }
-
+   
+    public void DealDamage()
+    {
+        playerHealth.HealthUpdate(-damageAmount);
+    }
 }
+
+
