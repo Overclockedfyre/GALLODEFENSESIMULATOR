@@ -84,7 +84,7 @@ MonoBehaviour:
   targetRefreshRate: 0.2
   projectilePrefab: {fileID: 4220263405694556426, guid: 598e7c1ef79568244a2213122118ffb8, type: 3}
   firePoint: {fileID: 2145870587499104432}
-  fireCooldown: 0.6
+  fireCooldown: 0.01
 --- !u!212 &484040318023928332
 SpriteRenderer:
   serializedVersion: 2
