@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: 0032fc8afb3e8454989ff1e44cee491b
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 0032fc8afb3e8454989ff1e44cee491b
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: ba14cbfd7b2d343ca83c1842fc7de7aa
+  - enabled: 0
+    path: Assets/Scenes/TextScene.unity
+    guid: 77f7c3232635541f99e0c9a1723dfeda
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
