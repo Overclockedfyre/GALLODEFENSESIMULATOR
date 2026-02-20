@@ -28,8 +28,25 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnOne()
     {
+        if (enemyPrefab == null || path == null || spawnPoint == null)
+        {
+            Debug.LogError($"EnemySpawner missing refs. enemyPrefab={enemyPrefab} path={path} spawnPoint={spawnPoint}");
+            enabled = false;
+            return;
+        }
+
         GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
-        enemy.GetComponent<EnemyFollowPath>().Init(path);
+
+        var follow = enemy.GetComponent<EnemyFollowPath>();
+        if (follow == null)
+        {
+            Debug.LogError("Spawned enemyPrefab is missing EnemyFollowPath.");
+            Destroy(enemy);
+            enabled = false;
+            return;
+        }
+
+        follow.Init(path);
         spawned++;
     }
 }
