@@ -12,4 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85252ea4ff953794785f8d1fb7df98f2, type: 3}
   m_Name: Waves_Main
   m_EditorClassIdentifier: Assembly-CSharp::WaveConfig
-  waves: []
+  waves:
+  - preDelay: 0
+    interGroupDelay: 0
+    groups:
+    - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
+      count: 2
+      spawnInterval: 5
+    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
+      count: 5
+      spawnInterval: 3
+  - preDelay: 0
+    interGroupDelay: 0
+    groups:
+    - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
+      count: 30
+      spawnInterval: 0.5
+  - preDelay: 0
+    interGroupDelay: 0
+    groups:
+    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
+      count: 10
+      spawnInterval: 0.1
+  - preDelay: 0
+    interGroupDelay: 0
+    groups:
+    - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
+      count: 5
+      spawnInterval: 2
+  - preDelay: 0
+    interGroupDelay: 0
+    groups:
+    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
+      count: 10
+      spawnInterval: 0.1
