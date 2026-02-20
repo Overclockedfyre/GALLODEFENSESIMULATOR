@@ -67,6 +67,14 @@ public class EnemyFollowPath : MonoBehaviour
 
     private void OnReachedEnd()
     {
+        // How much damage each enemy does
+        int damage = 1;
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.DamageBase(damage);
+        else
+            Debug.LogError("No GameManager in scene!");
+
         Destroy(gameObject);
     }
 }

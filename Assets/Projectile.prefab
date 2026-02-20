@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   speed: 12
-  damage: 5
+  damage: 1
   lifetime: 3
 --- !u!58 &1759602173712173247
 CircleCollider2D:

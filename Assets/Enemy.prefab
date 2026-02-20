@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFollowPath
   path: {fileID: 0}
-  speed: 2
+  speed: 5
   reachDistance: 0.05
   rotateToMoveDir: 0
   turnSpeedDegPerSec: 720
