@@ -8,17 +8,10 @@ public class ShopItem : MonoBehaviour
     {
         Debug.Log("clicked");
         placementController.TakeItem(itemPrefab);
+
+        //GalloTower() is a button
+        //currency happening here 
+
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

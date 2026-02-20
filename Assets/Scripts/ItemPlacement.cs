@@ -6,6 +6,7 @@ public class ItemPlacement : MonoBehaviour
 
     private GameObject currentItem;
     private bool isPlacing = false;
+    private bool moving = false;
     private Vector3 originalScale;
 
     public void TakeItem(GameObject prefab)
@@ -15,6 +16,7 @@ public class ItemPlacement : MonoBehaviour
         currentItem = Instantiate(prefab, canvas.transform);
         originalScale = currentItem.transform.localScale;
         isPlacing = true;
+        moving = true;
     }
 
     void Update()
@@ -22,6 +24,15 @@ public class ItemPlacement : MonoBehaviour
         if (!isPlacing) return;
 
         FollowMouse();
+
+        if (moving)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                moving = false;
+            }
+            return;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
