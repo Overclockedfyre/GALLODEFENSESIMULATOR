@@ -1,6 +1,25 @@
 using UnityEngine;
+public class Enemy : MonoBehaviour
+{
+    [Header("Health")]
+    [SerializeField] private float maxHealth = 10f;
+    private float health;
 
-public class EnemyFollowPath : MonoBehaviour
+    void Awake()
+    {
+        health = maxHealth;
+    }
+
+    public void TakeDamage(float amount)
+    {
+        health -= amount;
+        if (health <= 0f)
+        {
+            Destroy(gameObject);
+        }
+    }
+}
+    public class EnemyFollowPath : MonoBehaviour
 {
     [SerializeField] private Path path;
     [SerializeField] private float speed = 2f;
