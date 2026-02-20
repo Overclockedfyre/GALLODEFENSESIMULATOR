@@ -2,31 +2,53 @@ using UnityEngine;
 
 public class ItemPlacement : MonoBehaviour
 {
-    public bool isPlacing = false;
-    public GameObject currentItem;
-    public void TakeItem()
-    {
+    public Canvas canvas;
 
+    private GameObject currentItem;
+    private bool isPlacing = false;
+    private Vector3 originalScale;
+
+    public void TakeItem(GameObject prefab)
+    {
+        if (isPlacing) return;
+
+        currentItem = Instantiate(prefab, canvas.transform);
+        originalScale = currentItem.transform.localScale;
         isPlacing = true;
-        // called by shop item
-        // is placing turns true
-        // copy an item here
-        
     }
 
-    public void Update()
+    void Update()
     {
-        //check every frame if taking item is doing the same thing
-        //detect click here, if clicked call confirmpalcement()
-         
+        if (!isPlacing) return;
+
+        FollowMouse();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            ConfirmPlacement();
+        }
     }
-    public void TakingItem()
+
+    void FollowMouse()
     {
-       // copied item follow the mouse
+        RectTransform rectTransform = currentItem.GetComponent<RectTransform>();
+        Vector2 localPoint;
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvas.transform as RectTransform,
+            Input.mousePosition,
+            canvas.worldCamera,
+            out localPoint
+    );
+
+    rectTransform.localPosition = localPoint;
     }
-    public void ConfirmPlacement()
+
+    void ConfirmPlacement()
     {
-        //check if it is clicked again, if yes, place item in teh same location
-        //placed item resize to a bigger version
+        currentItem.transform.localScale = originalScale * 2f;
+
+        isPlacing = false;
+        currentItem = null;
     }
 }
