@@ -8,6 +8,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private Path path;
     [SerializeField] private TMP_Text waveText;
+    [SerializeField] private int waveClearBonus = 25;
 
     [SerializeField] private bool autoStart = true;
     [SerializeField] private bool autoNextWave = true;
@@ -68,6 +69,9 @@ public class WaveManager : MonoBehaviour
         IsSpawning = false;
 
         yield return new WaitUntil(() => CountAliveEnemies() == 0);
+
+        if (MoneyManager.Instance != null)
+            MoneyManager.Instance.Add(waveClearBonus);
 
         if (autoNextWave)
             StartNextWave();

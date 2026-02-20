@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   maxHealth: 10
+  moneyDrop: 10
 --- !u!58 &-6269373179585769410
 CircleCollider2D:
   m_ObjectHideFlags: 0
