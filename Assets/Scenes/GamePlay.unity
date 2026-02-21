@@ -989,8 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d928e5737ce341b4f831ed7aad02363d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  maxHealth: 20
-  currentHealth: 0
+  maxHealth: 100
   healthText: {fileID: 669126698}
   loseSceneName: GameOver
 --- !u!4 &610058400
@@ -1956,7 +1955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fa428e4d612489bb0f0e587056097f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
-  placementController: {fileID: 0}
+  placementController: {fileID: 2096041619}
   itemPrefab: {fileID: 8505710812345368549, guid: a16cda3f3db7a2f41861f2f98d5c55ea, type: 3}
   cost: 200
 --- !u!114 &1078646052
@@ -2003,13 +2002,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2096041619}
-        m_TargetAssemblyTypeName: ItemPlacement, Assembly-CSharp
-        m_MethodName: TakeItem
-        m_Mode: 2
+      - m_Target: {fileID: 1078646051}
+        m_TargetAssemblyTypeName: ShopItem, Assembly-CSharp
+        m_MethodName: Select
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8505710812345368549, guid: a16cda3f3db7a2f41861f2f98d5c55ea, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2739,8 +2738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c0463b70a644803a70b706d1a69217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackHealth
-  healthBar: {fileID: 0}
-  CurrentHp: 100
+  healthFill: {fileID: 1271549427}
 --- !u!114 &1271549427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3321,7 +3319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   PauseMenu: {fileID: 1528943004}
-  playerHealth: {fileID: 0}
   damageAmount: 10
 --- !u!4 &1654025106
 Transform:

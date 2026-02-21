@@ -1,55 +1,33 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class TrackHealth : MonoBehaviour
+public class BaseHealthBarUI : MonoBehaviour
 {
-    [Header("UI")]
-    [SerializeField] private Image healthFill;   // assign HPFill image (Image Type = Filled)
-
-    [Header("Health")]
-    [SerializeField] private int maxHp = 100;
-    [SerializeField] private int currentHp;
-
-    [Header("Lose")]
-    [SerializeField] private string loseSceneName = "GameOver";
-
-    private bool gameOver;
+    [SerializeField] private Image healthFill; // drag HPTrack's Image here (usually itself)
 
     private void Awake()
     {
-        currentHp = maxHp;
-        Refresh();
+        if (healthFill == null)
+            healthFill = GetComponent<Image>();
     }
 
-    public void TakeDamage(int damage)
+    private void OnEnable()
     {
-        if (gameOver) return;
+        GameManager.OnBaseHealthChanged += HandleHealthChanged;
 
-        damage = Mathf.Max(0, damage);
-        currentHp = Mathf.Clamp(currentHp - damage, 0, maxHp);
-        Refresh();
-
-        if (currentHp <= 0)
-        {
-            gameOver = true;
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(loseSceneName);
-        }
+        // push an initial refresh if GameManager already exists
+        if (GameManager.Instance != null)
+            HandleHealthChanged(GameManager.Instance.CurrentHealth, GameManager.Instance.MaxHealth);
     }
 
-    public void Heal(int amount)
+    private void OnDisable()
     {
-        if (gameOver) return;
-
-        amount = Mathf.Max(0, amount);
-        currentHp = Mathf.Clamp(currentHp + amount, 0, maxHp);
-        Refresh();
+        GameManager.OnBaseHealthChanged -= HandleHealthChanged;
     }
 
-    private void Refresh()
+    private void HandleHealthChanged(int current, int max)
     {
-        if (healthFill != null)
-            healthFill.fillAmount = (maxHp <= 0) ? 0f : (float)currentHp / maxHp;
+        if (healthFill == null) return;
+        healthFill.fillAmount = (max <= 0) ? 0f : (float)current / max;
     }
 }
