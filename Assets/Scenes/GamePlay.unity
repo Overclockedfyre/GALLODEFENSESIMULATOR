@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7ea91aa8f4e364787c40ee681fca8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
-  startingMoney: 200
+  startingMoney: 2147483647
   moneyText: {fileID: 1134268769}
 --- !u!4 &947743654
 Transform:
@@ -3655,7 +3655,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.1291547, y: -0.33992887}
+  m_Offset: {x: 1.1291547, y: -0.3076886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3665,7 +3665,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.495481, y: 2.24123}
+  m_Size: {x: 5.495481, y: 2.692589}
   m_EdgeRadius: 0
 --- !u!4 &1834543573
 Transform:
