@@ -10,7 +10,7 @@ public class Tower : MonoBehaviour
     [Header("Firing")]
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform firePoint; // empty child transform at barrel
-    [SerializeField] private float fireCooldown = 0.6f;
+    public float fireCooldown = 0.6f;
 
     private Transform currentTarget;
     private float fireTimer;
