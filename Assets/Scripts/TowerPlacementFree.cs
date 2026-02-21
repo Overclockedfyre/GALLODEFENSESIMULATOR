@@ -105,4 +105,25 @@ public class TowerPlacementFree : MonoBehaviour
         Instantiate(prefab, world, Quaternion.identity);
         return true;
     }
+    public bool CanPlaceAtScreen(Vector2 screenPos)
+    {
+        if (cam == null) cam = Camera.main;
+        if (cam == null) return false;
+
+        Vector3 world = cam.ScreenToWorldPoint(screenPos);
+        world.z = 0f;
+        return CanPlaceAt(world);
+    }
+
+    public GameObject PlaceAtScreen(Vector2 screenPos, GameObject prefab)
+    {
+        if (prefab == null) return null;
+        if (cam == null) cam = Camera.main;
+        if (cam == null) return null;
+
+        Vector3 world = cam.ScreenToWorldPoint(screenPos);
+        world.z = 0f;
+
+        return Instantiate(prefab, world, Quaternion.identity);
+    }
 }

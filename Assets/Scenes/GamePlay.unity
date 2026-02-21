@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7ea91aa8f4e364787c40ee681fca8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
-  startingMoney: 100
+  startingMoney: 200
   moneyText: {fileID: 1134268769}
 --- !u!4 &947743654
 Transform:
@@ -1956,8 +1956,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fa428e4d612489bb0f0e587056097f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
-  placementSystem: {fileID: 817331300}
+  placementController: {fileID: 0}
   itemPrefab: {fileID: 8505710812345368549, guid: a16cda3f3db7a2f41861f2f98d5c55ea, type: 3}
+  cost: 200
 --- !u!114 &1078646052
 MonoBehaviour:
   m_ObjectHideFlags: 0

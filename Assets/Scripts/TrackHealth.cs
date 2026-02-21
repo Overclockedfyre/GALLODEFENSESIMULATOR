@@ -4,22 +4,52 @@ using UnityEngine.UI;
 
 public class TrackHealth : MonoBehaviour
 {
-   public Image healthBar;
-   private int Max = 100;
-   public int CurrentHp = 100;
-   private bool overAttack;
+    [Header("UI")]
+    [SerializeField] private Image healthFill;   // assign HPFill image (Image Type = Filled)
 
+    [Header("Health")]
+    [SerializeField] private int maxHp = 100;
+    [SerializeField] private int currentHp;
 
-    public void HealthUpdate(int damage)
+    [Header("Lose")]
+    [SerializeField] private string loseSceneName = "GameOver";
+
+    private bool gameOver;
+
+    private void Awake()
     {
-        
-        CurrentHp += damage;
-        CurrentHp = Mathf.Clamp(CurrentHp, 0, Max);
+        currentHp = maxHp;
+        Refresh();
+    }
 
-        healthBar.fillAmount = (float) CurrentHp / Max;
+    public void TakeDamage(int damage)
+    {
+        if (gameOver) return;
 
-        if (overAttack == false && CurrentHp <= 0)
-            SceneManager.LoadScene("GameOver");
+        damage = Mathf.Max(0, damage);
+        currentHp = Mathf.Clamp(currentHp - damage, 0, maxHp);
+        Refresh();
 
+        if (currentHp <= 0)
+        {
+            gameOver = true;
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(loseSceneName);
+        }
+    }
+
+    public void Heal(int amount)
+    {
+        if (gameOver) return;
+
+        amount = Mathf.Max(0, amount);
+        currentHp = Mathf.Clamp(currentHp + amount, 0, maxHp);
+        Refresh();
+    }
+
+    private void Refresh()
+    {
+        if (healthFill != null)
+            healthFill.fillAmount = (maxHp <= 0) ? 0f : (float)currentHp / maxHp;
     }
 }

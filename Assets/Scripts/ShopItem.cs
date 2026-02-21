@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class ShopItem : MonoBehaviour
 {
-    public TowerPlacementFree placementSystem;
+    public ItemPlacement placementController;
     public GameObject itemPrefab;
+    public int cost = 25;
 
-    public void SelectTower()
+    public void Select()
     {
-        placementSystem.SetCurrentTower(itemPrefab);
+        Debug.Log($"SHOP SELECT: {itemPrefab.name} cost={cost}");
+        placementController.TakeItem(itemPrefab, cost);
     }
 }

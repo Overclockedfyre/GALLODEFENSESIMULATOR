@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GPButtons : MonoBehaviour
 {
     public GameObject PauseMenu;
-     public TrackHealth playerHealth;
+    [SerializeField] private TrackHealth trackHealth;
     public int damageAmount = 10;
 
     public void SetButton() // Pause
@@ -33,6 +33,12 @@ public class GPButtons : MonoBehaviour
 
     public void DealDamage()
     {
-        playerHealth.HealthUpdate(-damageAmount);
+        if (trackHealth == null)
+        {
+            Debug.LogError("GPButtons: trackHealth is NOT assigned in Inspector.");
+            return;
+        }
+
+        trackHealth.TakeDamage(damageAmount);
     }
 }
