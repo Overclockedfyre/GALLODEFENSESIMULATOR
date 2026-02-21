@@ -20,16 +20,27 @@ public class TowerPlacementFree : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
-
-        if (previewPrefab != null)
-        {
-            preview = Instantiate(previewPrefab);
-        }
+        currentTowerPrefab = towerPrefab;
+        MakePreviewFor(currentTowerPrefab);
     }
+    private void MakePreviewFor(GameObject prefab)
+    {
+        if (preview != null) Destroy(preview);
 
+        if (prefab == null) return;
+
+        preview = Instantiate(prefab);
+        // Optional: make preview semi-transparent + disable colliders
+        foreach (var col in preview.GetComponentsInChildren<Collider2D>())
+            col.enabled = false;
+
+        var srs = preview.GetComponentsInChildren<SpriteRenderer>();
+        foreach (var sr in srs)
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.5f);
+    }
     private void Update()
     {
-        if (cam == null || towerPrefab == null) return;
+        if (cam == null || currentTowerPrefab == null) return;
 
         Vector3 world = cam.ScreenToWorldPoint(Input.mousePosition);
         world.z = 0f;
@@ -50,8 +61,15 @@ public class TowerPlacementFree : MonoBehaviour
         // Click to place
         if (Input.GetMouseButtonDown(0) && canPlace)
         {
-            Instantiate(towerPrefab, world, Quaternion.identity);
+            Instantiate(currentTowerPrefab, world, Quaternion.identity);
         }
+    }
+    private GameObject currentTowerPrefab;
+
+    public void SetCurrentTower(GameObject tower)
+    {
+        currentTowerPrefab = tower;
+        MakePreviewFor(currentTowerPrefab);
     }
 
     private bool CanPlaceAt(Vector2 pos)
@@ -71,5 +89,20 @@ public class TowerPlacementFree : MonoBehaviour
     {
         // visualize footprint at mouse only in play mode is harder, so just show size concept
         Gizmos.DrawWireCube(transform.position, footprintSize);
+    }
+    public bool TryPlaceAtScreen(Vector2 screenPos, GameObject prefab)
+    {
+        if (prefab == null) return false;
+
+        if (cam == null) cam = Camera.main;
+        if (cam == null) return false;
+
+        Vector3 world = cam.ScreenToWorldPoint(screenPos);
+        world.z = 0f;
+
+        if (!CanPlaceAt(world)) return false;
+
+        Instantiate(prefab, world, Quaternion.identity);
+        return true;
     }
 }

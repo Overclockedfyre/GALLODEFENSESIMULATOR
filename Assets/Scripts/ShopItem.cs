@@ -2,16 +2,11 @@ using UnityEngine;
 
 public class ShopItem : MonoBehaviour
 {
-    public ItemPlacement placementController;
+    public TowerPlacementFree placementSystem;
     public GameObject itemPrefab;
-    public void GalloTower()
+
+    public void SelectTower()
     {
-        Debug.Log("clicked");
-        placementController.TakeItem(itemPrefab);
-
-        //GalloTower() is a button
-        //currency happening here 
-
+        placementSystem.SetCurrentTower(itemPrefab);
     }
-
 }
