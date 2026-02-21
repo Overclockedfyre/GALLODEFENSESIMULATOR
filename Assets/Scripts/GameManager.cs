@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         if (gameOver) return;
 
         amount = Mathf.Max(0, amount);
+        SoundManagement.Instance.PlaySFX(SoundManagement.Instance.GalloHurt);
         currentHealth -= amount;
         if (currentHealth < 0) currentHealth = 0;
 

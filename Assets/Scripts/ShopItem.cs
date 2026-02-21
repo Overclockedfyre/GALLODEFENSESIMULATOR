@@ -8,6 +8,7 @@ public class ShopItem : MonoBehaviour
 
     public void Select()
     {
+        SoundManagement.Instance.PlayUI(SoundManagement.Instance.BuyGallo);
         Debug.Log($"SHOP SELECT: {itemPrefab.name} cost={cost}");
         placementController.TakeItem(itemPrefab, cost);
     }
