@@ -1016,9 +1016,9 @@ MonoBehaviour:
   uiSource: {fileID: 1393284540}
   sfxSource: {fileID: 1393284539}
   ButtonClick: {fileID: 8300000, guid: df99823c398fe4f00835682a6b9f5217, type: 3}
-  BuyGallo: {fileID: 8300000, guid: b6394c2390f1d40f09e9df5f3cd39420, type: 3}
+  BuyGallo: {fileID: 8300000, guid: 3e25fea42b3494b0c879b5e6a9cd6a94, type: 3}
   DontBuyGallo: {fileID: 8300000, guid: f142e16f9c43e4e2786221abd664f229, type: 3}
-  GameOver: {fileID: 8300000, guid: 18cd4232cf46648b8b35b433cb5a053c, type: 3}
+  GameOver: {fileID: 8300000, guid: 27373145b891c414d9cb2dacf768d5ed, type: 3}
   Win: {fileID: 0}
   MainMenu: {fileID: 0}
   GalloShoot: {fileID: 8300000, guid: e730f0ecb16b04923b06a11d51d36132, type: 3}

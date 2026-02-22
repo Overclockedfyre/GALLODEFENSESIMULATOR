@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
 {
@@ -73,8 +74,13 @@ public class WaveManager : MonoBehaviour
         if (MoneyManager.Instance != null)
             MoneyManager.Instance.Add(waveClearBonus);
 
-        if (autoNextWave)
+        if (CurrentWaveIndex >= waveConfig.waves.Count - 1)
+        {
+            SceneManager.LoadScene("WinScene");
+        } else {
             StartNextWave();
+        }
+            
     }
 
     private void Spawn(GameObject enemyPrefab)

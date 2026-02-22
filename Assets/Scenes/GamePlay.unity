@@ -991,7 +991,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   maxHealth: 100
   healthText: {fileID: 669126698}
-  loseSceneName: GameOver
 --- !u!4 &610058400
 Transform:
   m_ObjectHideFlags: 0
@@ -1814,7 +1813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7ea91aa8f4e364787c40ee681fca8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
-  startingMoney: 220
+  startingMoney: 1000000
   moneyText: {fileID: 1134268769}
 --- !u!4 &947743654
 Transform:
