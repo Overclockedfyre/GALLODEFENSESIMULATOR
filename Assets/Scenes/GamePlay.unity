@@ -2094,6 +2094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
   placementController: {fileID: 2096041619}
+  moneyManager: {fileID: 947743653}
   itemPrefab: {fileID: 8505710812345368549, guid: a16cda3f3db7a2f41861f2f98d5c55ea, type: 3}
   cost: 200
 --- !u!114 &1078646052
