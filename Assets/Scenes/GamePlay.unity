@@ -5390,6 +5390,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3977490285296961283, guid: a16cda3f3db7a2f41861f2f98d5c55ea, type: 3}
+      propertyPath: fireCooldown
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3977490285296961283, guid: a16cda3f3db7a2f41861f2f98d5c55ea, type: 3}
       propertyPath: enemyLayer.m_Bits
       value: 256
       objectReference: {fileID: 0}
