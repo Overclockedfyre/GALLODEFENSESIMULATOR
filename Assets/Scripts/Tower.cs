@@ -66,6 +66,9 @@ public class Tower : MonoBehaviour
 
         Projectile p = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         p.Init(target);
+
+        SoundManagement.Instance.PlaySFX(SoundManagement.Instance.GalloShoot);
+
     }
 
     void OnDrawGizmosSelected()

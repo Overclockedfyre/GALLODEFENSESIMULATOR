@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
     [Header("UI (optional)")]
     [SerializeField] private TMP_Text healthText; // optional
 
-    [Header("Lose Screen")]
-    [SerializeField] private string loseSceneName = "Lose";
+    // [Header("Lose Screen")]
+    // [SerializeField] private string loseSceneName = "Lose";
 
     private bool gameOver;
 
@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         if (gameOver) return;
 
         amount = Mathf.Max(0, amount);
+        SoundManagement.Instance.PlaySFX(SoundManagement.Instance.GalloHurt);
         currentHealth -= amount;
         if (currentHealth < 0) currentHealth = 0;
 
@@ -74,6 +75,7 @@ public class GameManager : MonoBehaviour
     private void LoseGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(loseSceneName);
+        SceneManager.LoadScene("GameOver");
+        SoundManagement.Instance.PlayUI(SoundManagement.Instance.GameOver);
     }
 }

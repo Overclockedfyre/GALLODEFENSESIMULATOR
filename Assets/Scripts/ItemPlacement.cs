@@ -105,9 +105,10 @@ public class ItemPlacement : MonoBehaviour
         bool spent = MoneyManager.Instance.TrySpend(selectedCost);
         Debug.Log("spent=" + spent);
 
-        if (!spent) { Debug.Log("BLOCKED: Not enough money"); return; }
+        if (!spent) { Debug.Log("BLOCKED: Not enough money");SoundManagement.Instance.PlayUI(SoundManagement.Instance.DontBuyGallo); return; }
 
         worldPlacer.PlaceAtScreen(Input.mousePosition, selectedPrefab);
+        SoundManagement.Instance.PlaySFX(SoundManagement.Instance.TowerPlace);
         Debug.Log("PLACED!");
 
         Destroy(currentItem);

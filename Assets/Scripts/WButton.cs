@@ -1,19 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class MMButtons : MonoBehaviour
+public class WButton : MonoBehaviour
 {
-    public void PlayButton()
+   public void HomeButton()
     {
-        Debug.Log("I pressed it");
+        Debug.Log("back");
         SoundManagement.Instance.PlayUI(SoundManagement.Instance.ButtonClick);
-        SceneManager.LoadScene("GamePlay");
-
+        SceneManager.LoadScene("MainMenu");
     }
-    public void ExitButton()
+
+    public void LeaveButton()
     {
-        Debug.Log("let me go");
+        Debug.Log("exit");
         SoundManagement.Instance.PlayUI(SoundManagement.Instance.ButtonClick);
         Application.Quit();
     }

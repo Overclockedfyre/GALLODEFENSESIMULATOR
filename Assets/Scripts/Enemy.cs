@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
             else
                 Debug.LogError("MoneyManager.Instance is null (no MoneyManager in scene?)");
 
+            SoundManagement.Instance.PlaySFX(SoundManagement.Instance.EnemyDie);
             Destroy(gameObject);
         }
     }
