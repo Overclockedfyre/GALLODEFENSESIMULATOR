@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5218c083e229b4abf43fe12f20f2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHealth: 20
-  moneyDrop: 20
+  maxHealth: 30
+  moneyDrop: 10
 --- !u!58 &-6269373179585769410
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFollowPath
   path: {fileID: 0}
-  speed: 1
+  speed: 5
   reachDistance: 0.05
   rotateToMoveDir: 0
   turnSpeedDegPerSec: 720

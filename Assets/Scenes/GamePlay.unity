@@ -777,9 +777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '$50
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a14a8a1184c5f14fbce3338ea4d7a35, type: 2}
   m_sharedMaterial: {fileID: 1260715531048141648, guid: 9a14a8a1184c5f14fbce3338ea4d7a35, type: 2}
@@ -2090,7 +2088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7ea91aa8f4e364787c40ee681fca8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
-  startingMoney: 220
+  startingMoney: 900
   moneyText: {fileID: 1134268769}
 --- !u!4 &947743654
 Transform:
@@ -3798,6 +3796,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3422633159e35f478f6284a5cdddcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UPButtons
+  damagePriceText: {fileID: 1888217892}
+  bulletSpeedPriceText: {fileID: 1641066976}
+  fireRatePriceText: {fileID: 400873712}
 --- !u!4 &1491259666
 Transform:
   m_ObjectHideFlags: 0
@@ -4190,9 +4191,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '$50
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a14a8a1184c5f14fbce3338ea4d7a35, type: 2}
   m_sharedMaterial: {fileID: 1260715531048141648, guid: 9a14a8a1184c5f14fbce3338ea4d7a35, type: 2}
@@ -4805,7 +4804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $50
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a14a8a1184c5f14fbce3338ea4d7a35, type: 2}
   m_sharedMaterial: {fileID: 1260715531048141648, guid: 9a14a8a1184c5f14fbce3338ea4d7a35, type: 2}

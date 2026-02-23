@@ -1,12 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 
 public class UPButtons : MonoBehaviour
 {
-    private int damageUpgradeCost = 50;
-    private int bulletSpeedUpgradeCost = 50;
-    private int firerateUpgradeCost = 50;
+    [Header("Price Text References")]
+    [SerializeField] private TMP_Text damagePriceText;
+    [SerializeField] private TMP_Text bulletSpeedPriceText;
+    [SerializeField] private TMP_Text fireRatePriceText;
+    private int damageUpgradeCost = 300;
+    private int bulletSpeedUpgradeCost = 300;
+    private int firerateUpgradeCost = 300;
+    private void Start()
+    {
+        UpdatePriceUI();
+    }
+
     public void damageUP()
     {
         if (!MoneyManager.Instance.TrySpend(damageUpgradeCost))
@@ -20,7 +29,8 @@ public class UPButtons : MonoBehaviour
         if (projectile != null)
         {
             projectile.damage += 1;
-            damageUpgradeCost += 5;
+            damageUpgradeCost = Mathf.RoundToInt(damageUpgradeCost * 1.05f);
+            UpdatePriceUI();
         }
     }
     public void bulletspeedUP()
@@ -35,7 +45,8 @@ public class UPButtons : MonoBehaviour
         if (projectile != null)
         {
             projectile.speed += 1;
-            bulletSpeedUpgradeCost += 5;
+            bulletSpeedUpgradeCost = Mathf.RoundToInt(bulletSpeedUpgradeCost * 1.05f);
+            UpdatePriceUI();
         }
     }
     public void firerateUP()
@@ -50,8 +61,15 @@ public class UPButtons : MonoBehaviour
         if (tower != null)
         {
             tower.fireCooldown *= 0.8f;
-            firerateUpgradeCost += 5;
+            firerateUpgradeCost = Mathf.RoundToInt(firerateUpgradeCost * 1.05f);
+            UpdatePriceUI();
         }
+    }
+    private void UpdatePriceUI()
+    {
+        damagePriceText.text = "$" + damageUpgradeCost.ToString();
+        bulletSpeedPriceText.text = "$" + bulletSpeedUpgradeCost.ToString();
+        fireRatePriceText.text = "$" + firerateUpgradeCost.ToString();
     }
 
 }

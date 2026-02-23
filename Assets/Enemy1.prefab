@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   maxHealth: 10
-  moneyDrop: 10
+  moneyDrop: 5
 --- !u!58 &-6269373179585769410
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFollowPath
   path: {fileID: 0}
-  speed: 10
+  speed: 5
   reachDistance: 0.05
   rotateToMoveDir: 0
   turnSpeedDegPerSec: 720
