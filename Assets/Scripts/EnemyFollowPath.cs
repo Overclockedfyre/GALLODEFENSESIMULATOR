@@ -68,7 +68,7 @@ public class EnemyFollowPath : MonoBehaviour
     private void OnReachedEnd()
     {
         // How much damage each enemy does
-        int damage = 1;
+        int damage = 4;
 
         if (GameManager.Instance != null)
             GameManager.Instance.DamageBase(damage);

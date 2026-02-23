@@ -77,6 +77,7 @@ public class WaveManager : MonoBehaviour
         if (CurrentWaveIndex >= waveConfig.waves.Count - 1)
         {
             SceneManager.LoadScene("WinScene");
+            SoundManagement.Instance.PlayUI(SoundManagement.Instance.Win);
         } else {
             StartNextWave();
         }
