@@ -11,9 +11,11 @@ public class UPButtons : MonoBehaviour
     {
         if (!MoneyManager.Instance.TrySpend(damageUpgradeCost))
         {
+            SoundManagement.Instance.PlayUI(SoundManagement.Instance.DontBuyGallo);           
             return;
         }
 
+        SoundManagement.Instance.PlayUI(SoundManagement.Instance.BuyGallo);
         Projectile projectile = FindFirstObjectByType<Projectile>();
         if (projectile != null)
         {
@@ -25,9 +27,10 @@ public class UPButtons : MonoBehaviour
     {
         if (!MoneyManager.Instance.TrySpend(bulletSpeedUpgradeCost))
         {
+            SoundManagement.Instance.PlayUI(SoundManagement.Instance.DontBuyGallo);
             return;
         }
-
+        SoundManagement.Instance.PlayUI(SoundManagement.Instance.BuyGallo);
         Projectile projectile = FindFirstObjectByType<Projectile>();
         if (projectile != null)
         {
@@ -39,9 +42,10 @@ public class UPButtons : MonoBehaviour
     {
         if (!MoneyManager.Instance.TrySpend(firerateUpgradeCost))
         {
+            SoundManagement.Instance.PlayUI(SoundManagement.Instance.DontBuyGallo);
             return;
         }
-
+        SoundManagement.Instance.PlayUI(SoundManagement.Instance.BuyGallo);
          Tower tower = FindFirstObjectByType<Tower>();
         if (tower != null)
         {
