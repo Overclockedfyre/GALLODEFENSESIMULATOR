@@ -4697,7 +4697,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 806463374}
   path: {fileID: 720047603}
   waveText: {fileID: 1573998786}
-  waveClearBonus: 25
+  waveClearBonus: 50
   autoStart: 1
   autoNextWave: 1
   enemyTag: Enemy
