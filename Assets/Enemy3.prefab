@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 297761703447499198, guid: cce8032e1bc5d10488a14f302f83fd77, type: 3}
-  m_Color: {r: 0.8862745, g: 0.36470586, b: 0.8705617, a: 1}
+  m_Color: {r: 0.8862745, g: 0.8708065, b: 0.36470586, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5218c083e229b4abf43fe12f20f2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHealth: 20
+  maxHealth: 15
   moneyDrop: 15
 --- !u!58 &-6269373179585769410
 CircleCollider2D:
