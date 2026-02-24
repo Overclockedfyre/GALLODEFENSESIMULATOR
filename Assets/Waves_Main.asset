@@ -13,25 +13,25 @@ MonoBehaviour:
   m_Name: Waves_Main
   m_EditorClassIdentifier: Assembly-CSharp::WaveConfig
   waves:
-  - preDelay: 5
+  - preDelay: 4
     interGroupDelay: 0
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
       count: 10
       spawnInterval: 5
-  - preDelay: 5
+  - preDelay: 4
     interGroupDelay: 0
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
       count: 15
       spawnInterval: 5
-  - preDelay: 5
+  - preDelay: 4
     interGroupDelay: 0
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
       count: 15
       spawnInterval: 0.75
-  - preDelay: 0
+  - preDelay: 4
     interGroupDelay: 2
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: 85b53936514336540aeb8021bafa4e77, type: 3}
@@ -64,13 +64,13 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
       count: 3
       spawnInterval: 0.1
-  - preDelay: 0
+  - preDelay: 4
     interGroupDelay: 0
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
       count: 30
       spawnInterval: 2
-  - preDelay: 0
+  - preDelay: 4
     interGroupDelay: 0
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: 85b53936514336540aeb8021bafa4e77, type: 3}
@@ -82,13 +82,13 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 5512312491232023373, guid: 85b53936514336540aeb8021bafa4e77, type: 3}
       count: 8
       spawnInterval: 3
-  - preDelay: 0
+  - preDelay: 4
     interGroupDelay: 0
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: 85b53936514336540aeb8021bafa4e77, type: 3}
       count: 20
       spawnInterval: 5
-  - preDelay: 0
+  - preDelay: 4
     interGroupDelay: 3
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
@@ -100,7 +100,7 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
       count: 1
       spawnInterval: 0.8
-  - preDelay: 0
+  - preDelay: 4
     interGroupDelay: 0
     groups:
     - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
@@ -121,147 +121,48 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
       count: 8
       spawnInterval: 1
-  - preDelay: 0
+  - preDelay: 4
+    interGroupDelay: 2
+    groups:
+    - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
+      count: 10
+      spawnInterval: 2
+    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
+      count: 2
+      spawnInterval: 0.5
+    - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
+      count: 10
+      spawnInterval: 0.5
+    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
+      count: 2
+      spawnInterval: 0.5
+    - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
+      count: 10
+      spawnInterval: 0.5
+    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
+      count: 2
+      spawnInterval: 0.5
+    - enemyPrefab: {fileID: 5512312491232023373, guid: c73435d4b56906f498c546b3ab2ba65b, type: 3}
+      count: 10
+      spawnInterval: 0.5
+  - preDelay: 4
     interGroupDelay: 0
     groups:
+    - enemyPrefab: {fileID: 5512312491232023373, guid: 85b53936514336540aeb8021bafa4e77, type: 3}
+      count: 10
+      spawnInterval: 1
+    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
+      count: 5
+      spawnInterval: 1
+    - enemyPrefab: {fileID: 5512312491232023373, guid: 85b53936514336540aeb8021bafa4e77, type: 3}
+      count: 5
+      spawnInterval: 1
     - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
       count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
+      spawnInterval: 1
+  - preDelay: 4
     interGroupDelay: 0
     groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
-  - preDelay: 0
-    interGroupDelay: 0
-    groups:
-    - enemyPrefab: {fileID: 5512312491232023373, guid: dc5fece2546f1ae45a7de73c5553e4e4, type: 3}
-      count: 10
-      spawnInterval: 0.1
+    - enemyPrefab: {fileID: 5512312491232023373, guid: baf431f79d09ff548a49ed0c5a3556dd, type: 3}
+      count: 5
+      spawnInterval: 5
