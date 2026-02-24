@@ -2088,7 +2088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7ea91aa8f4e364787c40ee681fca8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
-  startingMoney: 900
+  startingMoney: 220
   moneyText: {fileID: 1134268769}
 --- !u!4 &947743654
 Transform:
